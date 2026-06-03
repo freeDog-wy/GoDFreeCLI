@@ -205,9 +205,9 @@ func BrowserWaitForTool() llm.Tool {
 }
 
 type BrowserWaitForInput struct {
-	Selector   string `json:"selector"`
-	TimeoutMs  int    `json:"timeout_ms,omitempty"`
-	TabID      string `json:"tab_id,omitempty"`
+	Selector  string `json:"selector"`
+	TimeoutMs int    `json:"timeout_ms,omitempty"`
+	TabID     string `json:"tab_id,omitempty"`
 }
 
 // ── browser_scroll ────────────────────────────────────────

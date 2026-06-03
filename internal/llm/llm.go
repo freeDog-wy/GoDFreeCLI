@@ -189,14 +189,14 @@ const (
 type ContentBlockType string
 
 const (
-	BlockTypeText             ContentBlockType = "text"
-	BlockTypeThinking         ContentBlockType = "thinking"
-	BlockTypeToolUse          ContentBlockType = "tool_use"
-	BlockTypeServerToolUse    ContentBlockType = "server_tool_use"
-	BlockTypeWebSearchResult  ContentBlockType = "web_search_result"
-	BlockTypeWebFetchResult   ContentBlockType = "web_fetch_result"
-	BlockTypeCodeExecResult   ContentBlockType = "code_execution_result"
-	BlockTypeToolResult       ContentBlockType = "tool_result"
+	BlockTypeText            ContentBlockType = "text"
+	BlockTypeThinking        ContentBlockType = "thinking"
+	BlockTypeToolUse         ContentBlockType = "tool_use"
+	BlockTypeServerToolUse   ContentBlockType = "server_tool_use"
+	BlockTypeWebSearchResult ContentBlockType = "web_search_result"
+	BlockTypeWebFetchResult  ContentBlockType = "web_fetch_result"
+	BlockTypeCodeExecResult  ContentBlockType = "code_execution_result"
+	BlockTypeToolResult      ContentBlockType = "tool_result"
 )
 
 // Usage tracks token consumption.
@@ -254,7 +254,7 @@ type Tool struct {
 
 // ToolSchema describes a tool's JSON Schema for its parameters.
 type ToolSchema struct {
-	Type       string              // typically "object"
+	Type       string // typically "object"
 	Properties map[string]Property
 	Required   []string
 }

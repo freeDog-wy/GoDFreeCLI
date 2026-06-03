@@ -566,4 +566,3 @@ func BrowserExecutors(bm *BrowserManager) map[string]llm.ToolExecutor {
 		BrowserManageTab:  makeBrowserManageTab(bm),
 	}
 }
-

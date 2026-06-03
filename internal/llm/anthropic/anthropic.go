@@ -146,9 +146,9 @@ func (p *Provider) streamLoop(ctx context.Context, req *llm.ChatRequest, ch chan
 		// They pause the ReAct loop and let the consumer handle
 		// them (ask user / activate skill).
 		var (
-			regularCalls  []anthropic.ToolUseBlock
-			askUserCalls  []anthropic.ToolUseBlock
-			useSkillCalls []anthropic.ToolUseBlock
+			regularCalls      []anthropic.ToolUseBlock
+			askUserCalls      []anthropic.ToolUseBlock
+			useSkillCalls     []anthropic.ToolUseBlock
 			delegateTaskCalls []anthropic.ToolUseBlock
 		)
 		for _, tc := range toolCalls {
@@ -156,8 +156,8 @@ func (p *Provider) streamLoop(ctx context.Context, req *llm.ChatRequest, ch chan
 			case "ask_user":
 				askUserCalls = append(askUserCalls, tc)
 			case "use_skill":
-				case "delegate_task":
-					delegateTaskCalls = append(delegateTaskCalls, tc)
+			case "delegate_task":
+				delegateTaskCalls = append(delegateTaskCalls, tc)
 				useSkillCalls = append(useSkillCalls, tc)
 			default:
 				regularCalls = append(regularCalls, tc)
@@ -176,16 +176,16 @@ func (p *Provider) streamLoop(ctx context.Context, req *llm.ChatRequest, ch chan
 			return
 		}
 
-			if len(delegateTaskCalls) > 0 {
-				for _, tc := range delegateTaskCalls {
+		if len(delegateTaskCalls) > 0 {
+			for _, tc := range delegateTaskCalls {
 				ch <- llm.DelegateTaskEvent{
 					ID:    tc.ID,
 					Input: tc.Input,
 				}
-				}
-				ch <- llm.DoneEvent{}
-				return
 			}
+			ch <- llm.DoneEvent{}
+			return
+		}
 
 		if len(useSkillCalls) > 0 {
 			for _, tc := range useSkillCalls {

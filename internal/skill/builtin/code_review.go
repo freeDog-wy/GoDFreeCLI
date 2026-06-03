@@ -35,8 +35,10 @@ type CodeReview struct{}
 
 var _ skill.Skill = CodeReview{}
 
-func (CodeReview) Name() string        { return "code_review" }
-func (CodeReview) Description() string { return "Review code changes for bugs, style issues, and improvement opportunities" }
+func (CodeReview) Name() string { return "code_review" }
+func (CodeReview) Description() string {
+	return "Review code changes for bugs, style issues, and improvement opportunities"
+}
 
 func (CodeReview) Prompt() string {
 	return `## Code Review Skill

@@ -17,9 +17,9 @@ import (
 // Registry holds all registered tools and their executors. It is safe for
 // concurrent use after creation (all mutations happen during initialization).
 type Registry struct {
-	mu       sync.RWMutex
-	tools    []llm.Tool
-	execMap  map[string]llm.ToolExecutor
+	mu      sync.RWMutex
+	tools   []llm.Tool
+	execMap map[string]llm.ToolExecutor
 }
 
 // New creates an empty tool registry.

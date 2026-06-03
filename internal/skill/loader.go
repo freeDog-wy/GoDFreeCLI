@@ -27,14 +27,14 @@ type SkillDef struct {
 
 // defSkill adapts a SkillDef + prompt body to the Skill interface.
 type defSkill struct {
-	def SkillDef
+	def    SkillDef
 	prompt string
 }
 
-func (s defSkill) Name() string                       { return s.def.Name }
-func (s defSkill) Description() string                { return s.def.Description }
-func (s defSkill) Prompt() string                     { return s.prompt }
-func (s defSkill) Tools() []llm.Tool                  { return nil }
+func (s defSkill) Name() string                           { return s.def.Name }
+func (s defSkill) Description() string                    { return s.def.Description }
+func (s defSkill) Prompt() string                         { return s.prompt }
+func (s defSkill) Tools() []llm.Tool                      { return nil }
 func (s defSkill) Executors() map[string]llm.ToolExecutor { return nil }
 
 // LoadFromDir scans dir for skill subdirectories and loads all enabled

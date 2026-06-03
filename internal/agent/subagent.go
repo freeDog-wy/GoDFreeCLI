@@ -80,12 +80,12 @@ func Run(ctx context.Context, provider llm.Provider, cfg Config) Result {
 
 	// Collect events from the sub-agent's stream
 	var (
-		output     strings.Builder
-		rounds     int
-		totalIn    int64
-		totalOut   int64
-		lastError  error
-		mu         sync.Mutex // protects counters during concurrent access
+		output    strings.Builder
+		rounds    int
+		totalIn   int64
+		totalOut  int64
+		lastError error
+		mu        sync.Mutex // protects counters during concurrent access
 	)
 
 	ch := provider.StreamChat(ctx, req)
