@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse -Depth 0 \"d:\\\\projects\\\\Go-projects\\\\GoDFreeCLI\")",
+      "Bash(Select-Object Mode, FullName)",
+      "Bash(Sort-Object FullName)",
+      "Bash(ls -la \"D:\\\\projects\\\\Go-projects\\\\anthropic-sdk-test\")",
+      "Read(//d/projects/Go-projects/anthropic-sdk-test/**)",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\" 2>$null)",
+      "PowerShell(Get-ChildItem -Recurse -Force \"d:\\\\projects\\\\Go-projects\\\\GoDFreeCLI\" | Where-Object { -not $_.PSIsContainer } | Select-Object FullName, Length, LastWriteTime | Format-Table -AutoSize)",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\openai\\\\openai-go@v3.37.0\" 2>$null)",
+      "Bash(ls -la \"d:/projects/Go-projects/\" 2>/dev/null)",
+      "Read(//d/projects/Go-projects/**)",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\packages\")",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\lib\")",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\shared\")",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\packages\\\\ssestream\")",
+      "Read(//c/Users/37252/go/pkg/mod/github.com/anthropics/anthropic-sdk-go@v1.46.0/shared/**)",
+      "Read(//c/Users/37252/go/pkg/mod/github.com/anthropics/anthropic-sdk-go@v1.46.0/packages/ssestream/**)",
+      "Read(//c/Users/37252/go/pkg/mod/github.com/anthropics/anthropic-sdk-go@v1.46.0/**)",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\option\")",
+      "PowerShell(ls \"$env:USERPROFILE\\\\go\\\\pkg\\\\mod\\\\github.com\\\\anthropics\\\\anthropic-sdk-go@v1.46.0\\\\packages\\\\param\")",
+      "Bash(go doc *)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\projects\\\\Go-projects\\\\GoDFreeCLI\\\\internal\\\\registry\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\projects\\\\Go-projects\\\\GoDFreeCLI\\\\internal\\\\mcp\")",
+      "Bash(go mod *)",
+      "Bash(go build *)",
+      "Bash(go vet *)"
+    ]
+  }
+}
