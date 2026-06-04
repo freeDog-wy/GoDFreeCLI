@@ -1,0 +1,13 @@
+# Claude Code local settings
+.claude/
+
+# Build output
+gdf
+gdf.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
